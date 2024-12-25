@@ -1,3 +1,5 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,23 +18,26 @@
   }
 }
 
-#__next{
-  height:100vh;
-  width: 100vw;
-}
-
 body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   color: rgb(var(--foreground-rgb));
-  height:100vh;
-  width: 100vw;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
 }
 
-#leva__root > div {
-  width:400px;
+.leva-container {
+  position: fixed !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  z-index: 1000 !important;
+}
+
+.bp4-card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
